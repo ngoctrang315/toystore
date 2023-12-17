@@ -93,8 +93,8 @@
 						
 
 		           <div class="col-sm-9 text-right">			            
-			           <form action="xuatExcelAccountControl" method="get"> 
-		           			<button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excel</button> 
+			           <form action="/xuatExcelAccountControl" > 
+		           			<button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
 		            	</form>    
 		          </div>
 
