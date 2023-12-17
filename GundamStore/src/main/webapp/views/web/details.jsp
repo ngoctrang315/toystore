@@ -35,6 +35,11 @@
 				<h1>${gunpla.gunplaName}</h1>
 				<h3 class="text" style="color: #0033FF">Price: ${gunpla.price}
 					VND</h3>
+				
+				
+				<h4 h3 class="text" style="color: #0033FF">Stock: ${gunpla.stock}</h4>
+				
+				
 				<h5 class="text" style="color: #0033FF">Grade: ${gunpla.gradeId}</h5>
 				<%--Rate: ${gunpla.rating}/10</h5>--%>
 				<p>Description: ${gunpla.desc}</p>
