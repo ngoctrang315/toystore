@@ -22,9 +22,9 @@
 			    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
 			    <br>
 			    <ul class="list-unstyled">
-			        <li><i class="fa fa-info-circle"></i><a href="" title=""> Giới Thiệu</a></li>
-			        <li><i class="fa fa-credit-card"></i><a href="" title=""> Chính Sách Thanh Toán</a></li>
-			        <li><i class="fa fa-truck"></i><a href="" title=""> Chính Sách Giao Hàng</a></li>
+			        <li><i class="fa fa-info-circle"></i><a href="${pageContext.request.contextPath}/views/web/GioiThieu.jsp" title=""> Giới Thiệu</a></li>
+			        <li><i class="fa fa-credit-card"></i><a href="${pageContext.request.contextPath}/views/web/ChinhSachThanhToan.jsp" title=""> Chính Sách Thanh Toán</a></li>
+			        <li><i class="fa fa-truck"></i><a href="${pageContext.request.contextPath}/views/web/ChinhSachGiaoHang.jsp" title=""> Chính Sách Giao Hàng</a></li>
 			        <li><i class="fa fa-exchange"></i><a href="" title=""> Chính Sách Đổi Trả</a></li>
 			        <li><i class="fa fa-shield"></i><a href="" title=""> Chính Sách Bảo Mật</a></li>
 			        <li><i class="fa fa-file-text"></i><a href="" title=""> Điều Khoản Dịch Vụ</a></li>

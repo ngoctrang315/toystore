@@ -29,10 +29,9 @@
 <body>
 
 	<%@include file="/commons/web/header.jsp"%>
-
 	<dec:body />
 
-	<%@include file="/commons/web/footer.jsp"%>
+	<%@include file="/commons/web/footeradmin.jsp"%>
 
 	<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"
 		type="text/javascript"></script>

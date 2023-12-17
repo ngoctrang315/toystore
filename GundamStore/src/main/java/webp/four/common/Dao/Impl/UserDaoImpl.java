@@ -1,6 +1,7 @@
 package webp.four.common.Dao.Impl;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -8,6 +9,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/*import context.DBContext;
+import entity.Account;*/
+/*import context.DBContext;
+import entity.Account;*/
 import webp.four.common.Connection.DBConnection;
 import webp.four.common.Dao.Interface.IUserDao;
 import webp.four.common.Model.User;
@@ -293,5 +298,36 @@ public class UserDaoImpl extends DBConnection implements IUserDao {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public List<User> getAllAccount() {
+	    List<User> list = new ArrayList<>();
+	    String query = "select * from Users";
+	    try {
+	        Connection conn = super.getConnection();
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ResultSet rs = ps.executeQuery();
 
+	        while (rs.next()) {
+	            list.add(new User(
+	                    rs.getInt("userId"),
+	                    rs.getString("userName"),
+	                    rs.getString("pass"),
+	                    rs.getString("fullName"),
+	                    rs.getInt("wallet"),
+	                    rs.getDate("dob"),
+	                    rs.getString("phone"),
+	                    rs.getString("creditCard"),
+	                    rs.getDate("createDate"),
+	                    rs.getInt("roleId"),
+	                    rs.getString("avatar"),
+	                    rs.getString("address")));
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return list;
+	}
+
+	
 }

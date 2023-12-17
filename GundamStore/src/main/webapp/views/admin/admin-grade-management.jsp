@@ -2,23 +2,43 @@
 	pageEncoding="UTF-8"%>
 
 <%@include file="/commons/taglib.jsp"%>
+<link rel="stylesheet" type="text/css" href="template/web/css/style.css">
 
 <div class="container">
 	<div class="row">
-		<div class="col-12 col-sm-3">
-			<div class="card bg-light mb-3">
+		<div class="col-12 col-sm-2" >
+			<div class="card mb-3">
 				<ul class="list-group category_block">
-					<li class="list-group-item"><a class="text-dark"
-						href="<c:url value='admin-statistics'/>">Statistics</a></li>
-					<li class="list-group-item"><a class="text-dark"
-						href="<c:url value='admin-user-management'/>">User management</a></li>
-					<li class="list-group-item"><a class="text-dark"
-						href="<c:url value='admin-store-management'/>">Store management</a></li>
-					<li class="list-group-item"><a class="text-dark"
-						href="<c:url value='admin-grade-management'/>">Grade management</a></li>
+				
+				    <li class="list-group-item list-item-black-bg">				    
+				    	<i class="fa fa-home" style="font-size: 20px; color: rgb(255, 255, 255)"></i>
+				        <a class="text-light" href="<c:url value='admin-statistics'/>"> Menu</a></li>
+				        				        
+				    <li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-bar-chart" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>
+				        <a class="text-light" href="<c:url value='admin-statistics'/>"> Statistics</a></li>					
+
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-users" style="font-size: 20px; color: rgb(255, 255, 255)"></i>					
+						<a class="text-light" href="<c:url value='admin-user-management'/>"> User</a></li>
+						
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-archive" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
+						<a class="text-light" href="<c:url value='admin-store-management'/>"> Store</a></li>
+						
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-user" style="font-size: 20px; color: rgb(255, 255, 255)"></i>					
+						<a class="text-light" href="<c:url value='user'/>"> Admin profile</a>
+					</li>
+					
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-exclamation" style="font-size: 20px; color: rgb(255, 0, 0)"></i>					
+						<a class="text-light" href="${pageContext.request.contextPath}/logout"> Logout</a>
+					</li>										
 				</ul>
 			</div>
 		</div>
+		
 		<div class="col">
 			<!--  <a href="<c:url value='/home'/>"><input type=button value='go tu hum'></a>-->
 			<!--  <div class="d-flex mb-2">

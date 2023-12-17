@@ -141,15 +141,16 @@
 				</form>
 			</div>
 		</c:if>
-
-
 	</div>
 </nav>
 
+
 <section class="jumbotron text-center">
-	<div class="container">
-		<h1 class="jumbotron-heading">TOY STORE</h1>
-		<p class="lead text-muted mb-0">Unleash the magic of play with our toy store - where fun knows no limits!</p>
-	</div>
+     <div class="container">
+         <h1 class="jumbotron-heading">TOY STORE</h1>
+         <p class="lead text-muted mb-0">Unleash the magic of play with our toy store - where fun knows no limits!</p>
+     </div>
 </section>
+
+
 </html>
