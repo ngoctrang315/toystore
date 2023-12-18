@@ -1,6 +1,7 @@
 package webp.four.common.Dao.Impl;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import webp.four.common.Connection.DBConnection;
 import webp.four.common.Dao.Interface.IGradeDao;
 import webp.four.common.Model.Grade;
 import webp.four.common.Model.Gunpla;
+import webp.four.common.Model.User;
 
 public class GradeDaoImpl extends DBConnection implements IGradeDao{
 	@Override
@@ -125,4 +127,25 @@ public class GradeDaoImpl extends DBConnection implements IGradeDao{
 		}
 		return null;
 	}
+	
+	public List<Grade> getAllGrade() {
+	    List<Grade> list = new ArrayList<>();
+	    String query = "select * from Grade";
+	    try {
+	        Connection conn = super.getConnection();
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ResultSet rs = ps.executeQuery();
+
+	        while (rs.next()) {
+	            list.add(new Grade(
+	                    rs.getString("grade"),
+	                    rs.getString("gradeName")));
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return list;
+	}	
+
+	
 }

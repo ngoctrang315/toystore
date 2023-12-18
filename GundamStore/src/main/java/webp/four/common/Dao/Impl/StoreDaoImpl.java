@@ -293,4 +293,29 @@ public class StoreDaoImpl extends DBConnection implements IStoreDao{
 		return false;
 	}
 	
+	public List<Store> getAllStore() {
+	    List<Store> list = new ArrayList<>();
+	    String query = "SELECT * FROM Store";
+	    try {
+	        Connection conn = super.getConnection();
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ResultSet rs = ps.executeQuery();
+
+	        while (rs.next()) {
+	            list.add(new Store(
+	                    rs.getInt("storeId"),
+	                    rs.getString("storeName"),
+	                    rs.getInt("userId"),
+	                    rs.getBoolean("isActive"),
+	                    rs.getInt("wallet"),
+	                    rs.getString("bioStore"),
+	                    rs.getDate("createDate")));
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return list;
+	}
+
+	
 }
