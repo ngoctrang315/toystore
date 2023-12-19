@@ -25,6 +25,11 @@
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-archive" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
 						<a class="text-light" href="<c:url value='admin-store-management'/>"> Store</a></li>
+
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-star" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
+						<a class="text-light" href="<c:url value='admin-grade-management'/>"> Grade</a></li>
+				
 						
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-user" style="font-size: 20px; color: rgb(255, 255, 255)"></i>					
@@ -40,25 +45,16 @@
 		</div>
 		
 		<div class="col">
-			<!--  <a href="<c:url value='/home'/>"><input type=button value='go tu hum'></a>-->
-			<!--  <div class="d-flex mb-2">
-				<input class="form-control bg-transparent" type="text" placeholder="Enter customer's phone number">
-                <button type="button" class="btn btn-primary ms-2" style="width:150px">Find</button>
-			</div>-->
-			<!--  
-			<div class="row">
-				First Name:<input type="text" name="fname" id="fname"><br> <br>
+
+			<div class="col-sm-9 text-right">
+			    <form action="/GundamStore/xuatExcelControl" style="display: flex; justify-content: flex-start;"> 
+			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
+			    </form>    
 			</div>
-			<div class="row">
-				Last Name:<input type="text" name="lname" id="lname"><br> <br>
-			</div>
-			<div class="row">
-				Age:<input type="text" name="score" id="score"><br> <br>
-			</div>
-			-->
+
 			<form action="" method="post">
 				<div class="row">
-					<dt class="col-sm-4 text-primary" >Enter new grade info</dt>
+					<!-- <dt class="col-sm-4 text-primary" >Enter new grade info</dt> -->
 					<label class="form-label" style="height: 30px"></label>
 				</div>
 

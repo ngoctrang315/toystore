@@ -25,6 +25,11 @@
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-archive" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
 						<a class="text-light" href="<c:url value='admin-store-management'/>"> Store</a></li>
+
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-star" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
+						<a class="text-light" href="<c:url value='admin-grade-management'/>"> Grade</a></li>
+					
 						
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-user" style="font-size: 20px; color: rgb(255, 255, 255)"></i>					

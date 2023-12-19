@@ -26,6 +26,11 @@
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-archive" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
 						<a class="text-light" href="<c:url value='admin-store-management'/>"> Store</a></li>
+
+					<li class="list-group-item list-item-black-bg">
+				    	<i class="fa fa-star" style="font-size: 20px; color: rgb(255, 255, 2550)"></i>					
+						<a class="text-light" href="<c:url value='admin-grade-management'/>"> Grade</a></li>
+				
 						
 					<li class="list-group-item list-item-black-bg">
 				    	<i class="fa fa-user" style="font-size: 20px; color: rgb(255, 255, 255)"></i>					
@@ -40,32 +45,18 @@
 			</div>
 		</div>
 		
-		<div class="col">
-			<!--  <div class="d-flex mb-2">
-				<input class="form-control bg-transparent" type="text" placeholder="Enter customer's phone number">
-                <button type="button" class="btn btn-primary ms-2" style="width:150px">Find</button>
-			</div>-->
-			<!--  
-			<div class="row">
-				First Name:<input type="text" name="fname" id="fname"><br> <br>
-			</div>
-			<div class="row">
-				Last Name:<input type="text" name="lname" id="lname"><br> <br>
-			</div>
-			<div class="row">
-				Age:<input type="text" name="score" id="score"><br> <br>
-			</div>
-			-->
+		<div class="col">			
+			<div class="col-sm-9 text-right">
+			    <form action="/GundamStore/xuatExcelAccountControl" style="display: flex; justify-content: flex-start;"> 
+			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
+			    </form>    
+			</div>		
+			
 			<form action="" method="post">
-				<!--  <div class="row">
-					<dt class="col-sm-4 text-primary">Enter new grade info</dt>
+ 				<div class="row">
+					<!-- <dt class="col-sm-4 text-primary">Selected user info</dt> -->
 					<label class="form-label" style="height: 30px"></label>
-				</div>-->
-
-				<div class="row">
-					<dt class="col-sm-4 text-primary">Selected user info</dt>
-					<label class="form-label" style="height: 30px"></label>
-				</div>
+				</div> 
 
 				<div class="row">
 					<label class="form-label" style="height: 10px">User ID</label>
@@ -87,22 +78,10 @@
 				<div class="row">
 					<label class="form-label" style="height: 16px"></label>
 				</div>
-				<div class="row">
-					<input type="submit" class="btn btn-warning m-2" name="settoadmin"
-						style="width: 150px" value="Promote">
-						
-
-		           <div class="col-sm-9 text-right">			            
-			           <form action="/xuatExcelAccountControl" > 
-		           			<button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
-		            	</form>    
-		          </div>
-
+				<div class="row d-flex justify-content-center">
+				    <input type="submit" class="btn btn-warning m-2" name="settoadmin" style="width: 150px" value="Promote">					
 				</div>
-				
-
-
-				
+							
 				<div class="row">
 					<label class="form-label" style="height: 15px"></label>
 				</div>
@@ -144,7 +123,5 @@
 				</div>
 			</form>
 		</div>
-
 	</div>
-
 </div>
