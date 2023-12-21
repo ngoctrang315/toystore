@@ -79,7 +79,7 @@ public class UserController extends HttpServlet {
 				session.setAttribute("user", currentuser);
 //				RequestDispatcher rq = req.getRequestDispatcher("/views/user/home.jsp");
 //				rq.forward(req, resp);
-				resp.sendRedirect("/GundamStore/user");
+				resp.sendRedirect("/ToyStore/user");
 			}
 			
 		} else {

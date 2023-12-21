@@ -45,7 +45,7 @@
 		<div class="col-12 col-md-3">
 			<div class="card">
 				<div class="card-header bg-success text-white text-uppercase">
-					<i class="fa fa-heart"></i> Top Toy
+					<i class="fa fa-heart"></i> Sản phẩm Nổi Bật
 				</div>
 					<div class="col-sm">
 						<div class="card nowrap">
@@ -75,7 +75,7 @@
 				<div class="col-sm">
 					<div class="card">
 						<div class="card-header bg-primary text-white text-uppercase">
-							<i class="fa fa-star"></i> Latest Toys
+							<i class="fa fa-star"></i> sản phẩm mới nhất
 						</div>
 						<div class="card-body">
 							<div class="row">
@@ -125,7 +125,7 @@
 				<div class="col-sm">
 					<div class="card">
 						<div class="card-header bg-primary text-white text-uppercase">
-							<i class="fa fa-trophy"></i> Budget Toys
+							<i class="fa fa-trophy"></i> sản phẩm phổ thông
 						</div>
 						<div class="card-body">
 							<div class="row">

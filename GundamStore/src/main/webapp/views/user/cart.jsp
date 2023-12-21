@@ -43,7 +43,8 @@
                                                                 <i class="fa fa-minus"></i>
                                                             </button>
                                                         </div>
-                                                        <input type="text"  style="width: 50px; text-align: center;" name="quantity" id="quantity${STT.index}" class="form-control" value="${cl[3]}" readonly>
+                                                        <input type="text" style="width: 50px; text-align: center;" name="quantity" id="quantity${STT.index}" class="form-control" value="1" readonly>
+
                                                         <div class="input-group-append">
                                                             <button type="button" class="btn btn-sm btn-success" onclick="increaseQuantity(${STT.index})">
                                                                 <i class="fa fa-plus"></i>
@@ -108,7 +109,7 @@
 function increaseQuantity(index) {
     var currentQuantity = parseInt(document.getElementById('quantity' + index).value);
 
-    if (currentQuantity > 1) {
+    if (currentQuantity >= 1) {
         document.getElementById('quantity' + index).value = currentQuantity +1;
         updateCartItemCount();
         updateTotalPrice();

@@ -62,7 +62,7 @@ public class CartController extends HttpServlet {
 			req.setAttribute("order", currentOrder);
 //			RequestDispatcher rq = req.getRequestDispatcher("views/user/cart.jsp");
 //			rq.forward(req, resp);
-			resp.sendRedirect("/GundamStore/cart");
+			resp.sendRedirect("/ToyStore/cart");
 		}
 		else if(url.contains("checkout"))
 		{	
@@ -75,7 +75,7 @@ public class CartController extends HttpServlet {
 			req.setAttribute("order", currentOrder);
 //			RequestDispatcher rq = req.getRequestDispatcher("views/user/cart.jsp");
 //			rq.forward(req, resp);
-			resp.sendRedirect("/GundamStore/cart");
+			resp.sendRedirect("/ToyStore/cart");
 			
 		}
 		else if(url.contains("cart"))
@@ -117,7 +117,7 @@ public class CartController extends HttpServlet {
 		//String url = req.getRequestURL().toString();
 //		RequestDispatcher rq = req.getRequestDispatcher("views/user/cart.jsp");
 //		rq.forward(req, resp);
-		resp.sendRedirect("/GundamStore/cart");
+		resp.sendRedirect("/ToyStore/cart");
 	}
 	
 	private void delete(HttpServletRequest req, HttpServletResponse resp) 

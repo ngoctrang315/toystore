@@ -45,24 +45,20 @@
 			</div>
 		</div>
 		
-		<div class="col">
-		
-			<div class="col-sm-9 text-right">
-			    <form action="/GundamStore/xuatExcelStore" style="display: flex; justify-content: flex-start;"> 
-			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
-			    </form>    
-			</div>		
+		<div class="col">				
 		
 			<form action="" method="post">
-				<!--  <div class="row">
-					<dt class="col-sm-4 text-primary">Enter new grade info</dt>
-					<label class="form-label" style="height: 30px"></label>
-				</div>-->
-
+			
 				<div class="row">
 					<dt class="col-sm-4 text-primary"></dt>
 					<label class="form-label" style="height: 30px"></label>
 				</div>
+				<div class="row">
+					<dt class="col-sm-4 text-primary">Store info:</dt>
+					<label class="form-label" style="height: 30px"></label>
+				</div>
+
+
 
 				<div class="row">
 					<label class="form-label" style="height: 10px">Store ID</label>
@@ -133,6 +129,17 @@
 					</script>
 				</div>
 			</form>
+			
+			<div class="col-sm-9 text-right">
+			    <form action="/ToyStore/xuatExcelStore" style="display: flex; justify-content: flex-end;"> 
+			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excel</button> 		           			
+			    </form>    
+			</div>
+
+			<div class="row">
+				<label class="form-label" style="height: 15px"></label>
+			</div>			
+			
 		</div>
 	</div>
 </div>

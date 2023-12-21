@@ -9,7 +9,7 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/home">Home</a></li>
-					<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/gunpla">Gunplas</a></li>
+					<li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/gunpla">Sản Phẩm</a></li>
 					<li class="breadcrumb-item active" aria-current="page">${currentGrade}</li>
 				</ol>
 			</nav>
@@ -22,11 +22,11 @@
 	<div class="row">
 		<div class="col-12 col-sm-3">
 			<div class="card bg-light mb-3">
-			<div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
+			<div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Danh Mục Đồ chơi</div>
 				<ul class="list-group category_block">
 				
 					<li class="list-group-item"><a class="text-dark"
-						href="<c:url value='/gunpla?index=1&gid=all'/>">All</a></li>
+						href="<c:url value='/gunpla?index=1&gid=all'/>">Tất cả</a></li>
 					<c:forEach items="${listGrade}" var='grade'>
 						<li class="list-group-item"><a class="text-dark"
 							href="<c:url value='/gunpla?index=1&gid=${grade.grade}'/>">${grade.gradeName}</a></li>

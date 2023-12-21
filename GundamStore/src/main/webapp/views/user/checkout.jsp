@@ -43,14 +43,12 @@
                 </div>
                 <hr class="mb-6">
                 <div class="row">
-						<div class="col">
-							<form method="post">
-									
-										<a href="<c:url value='/cart-checkout'/>" class="btn btn-success" type="button" onclick="submitOrder()" >
-										<i class="fa fa-shopping-cart" aria-hidden="true"  ></i> Order</a>
-							</form>
-						</div>
-				 </div>
+           		 <div class="col">
+                	<button type="button" class="btn btn-success" onclick="orderClicked()">
+                   		 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Order
+                	</button>
+            	 </div>
+        		</div>
 					<label class="form-labal" style="width: 100px"></label>
 
                 <div style="margin-top: 40px;"></div>
@@ -76,28 +74,7 @@
                     <!-- Include fields specific to Cash on Delivery if needed -->
                 </div>
 
-                <!-- Fields for Online Payment 
-                <div id="onlineFields" style="display: none;">
-                    <div class="form-group">
-                        <label for="bank">Bank</label>
-                        <select class="form-control" id="bank" name="bank">
-                            <option value="sacombank">Sacombank</option>
-                            <option value="viettinbank">Viettinbank</option>
-                            <option value="acb">AC Bank</option>
-                            <option value="bidv">BIDV</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cardNumber">Card Number</label>
-                        <input type="text" class="form-control" id="cardNumber" name="cardNumber">
-                    </div>
-                    
-                    <input type="hidden" name="balance" id="balance" value="${user.wallet}">
-
-                    
-                </div>
-            </div>  -->
+                
         </form>
     </div>
 </div>
@@ -111,19 +88,45 @@
 
 
     
-function submitOrder() {
-    // Kiểm tra xem tất cả các trường thông tin đã được điền đầy đủ chưa
-    var name = document.forms['frmthanhtoan']['kh_ten'].value;
-    var phone = document.forms['frmthanhtoan']['kh_diachi'].value;
-    var address = document.forms['frmthanhtoan']['kh_dienthoai'].value;
-    var email = document.forms['frmthanhtoan']['kh_email'].value;
-    var paymentMethod = document.forms['frmthanhtoan']['paymentMethod'].value;
+function orderClicked() {
+    var name = document.forms['frmthanhtoan']['kh_ten'];
+    var phone = document.forms['frmthanhtoan']['kh_diachi'];
+    var address = document.forms['frmthanhtoan']['kh_dienthoai'];
+    var email = document.forms['frmthanhtoan']['kh_email'];
+    var paymentMethod = document.forms['frmthanhtoan']['paymentMethod'];
 
-    if (name === '' || phone === '' || address === '' || email === '' || paymentMethod === undefined) {
-        alert('Vui lòng điền đầy đủ thông tin khách hàng và chọn phương thức thanh toán.');
-        return false;
+    // Kiểm tra và áp dụng lớp 'is-invalid' cho các ô input không hợp lệ
+    validateInput(name, 'Please enter your name.');
+    validateInput(phone, 'Please enter your phone number.');
+    validateInput(address, 'Please enter your address.');
+    validateInput(email, 'Please enter your email address.');
+
+    if (!paymentMethod || paymentMethod.value === undefined) {
+        document.getElementById('paymentError').style.display = 'block';
+    } else {
+        document.getElementById('paymentError').style.display = 'none';
     }
 
+    // Nếu có bất kỳ ô input nào không hợp lệ, không thực hiện submitOrder()
+    if (document.querySelector('.is-invalid')) {
+        return;
+    }
+
+    // Gọi hàm submitOrder() để xử lý thanh toán
+    submitOrder();
+}
+
+function validateInput(input, errorMessage) {
+    if (input.value === '') {
+        input.classList.add('is-invalid');
+        input.nextElementSibling.textContent = errorMessage;
+    } else {
+        input.classList.remove('is-invalid');
+        input.nextElementSibling.textContent = '';
+    }
+}
+
+function submitOrder() {
     // Kiểm tra số dư tài khoản có đủ để thanh toán hay không
     // Trong Servlet hoặc Controller
 
@@ -131,17 +134,14 @@ function submitOrder() {
 
     // Hiển thị chatbox "thanh toán thành công"
     alert('Thanh toán thành công');
-    
+
     // resetCart();
 
     // Quay về trang home
-    // window.location.replace('/GundamStore/home');
-
-    // Trả về false để ngăn form gửi đi và trang được chuyển hướng bởi JavaScript
-    return false;
+    window.location.href = '<c:url value="/cart-checkout"/>';
 }
 
    
 
 </script>
-<!-- End block content -->
+<!-- End block content --> 

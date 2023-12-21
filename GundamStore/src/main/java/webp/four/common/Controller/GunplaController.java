@@ -180,7 +180,7 @@ public class GunplaController extends HttpServlet {
 		{
 			addToCart(req,resp);
 		}
-		resp.sendRedirect("/GundamStore/gunpla");
+		resp.sendRedirect("/ToyStore/gunpla");
 	}
 	
 	

@@ -46,15 +46,11 @@
 		</div>
 		
 		<div class="col">			
-			<div class="col-sm-9 text-right">
-			    <form action="/GundamStore/xuatExcelAccountControl" style="display: flex; justify-content: flex-start;"> 
-			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
-			    </form>    
-			</div>		
+	
 			
 			<form action="" method="post">
  				<div class="row">
-					<!-- <dt class="col-sm-4 text-primary">Selected user info</dt> -->
+					 <dt class="col-sm-4 text-primary">Selected user info</dt> 
 					<label class="form-label" style="height: 30px"></label>
 				</div> 
 
@@ -122,6 +118,17 @@
 					</script>
 				</div>
 			</form>
+			
+			<div class="col-sm-9 text-right">
+			    <form action="/ToyStore/xuatExcelAccountControl" style="display: flex; justify-content: flex-start;"> 
+			        <button type="submit" class="mb-0 text-center btn btn-primary">Xuất file Excell</button> 		           			
+			    </form>    
+			</div>				
+
+			<div class="row">
+				<label class="form-label" style="height: 15px"></label>
+			</div>
+			
 		</div>
 	</div>
 </div>

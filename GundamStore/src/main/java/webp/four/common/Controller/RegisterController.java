@@ -35,9 +35,10 @@ public class RegisterController extends HttpServlet {
 		RequestDispatcher rq = req.getRequestDispatcher("views/web/register.jsp");
 		rq.forward(req, resp);
 	}
+	//(?=.*[@#$%]) tính có kí tự mà hơi khó
 	protected boolean isValid(String pass)
 	{
-		String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20}$";
+		String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$";
 		Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(pass);
 		return matcher.matches();

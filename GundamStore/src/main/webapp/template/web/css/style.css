@@ -79,6 +79,28 @@ footer a {
     color: #f8f9fa!important
 }
 
+.list-inline {
+    text-align: center;
+    border: 1px solid #ccc; /* Màu và độ rộng của viền */
+    padding: 10px; /* Khoảng cách bên trong của danh sách */
+}
+
+.list-inline-item {
+    display: inline-block;
+    text-align: center;
+    margin: 5px; /* Khoảng cách xung quanh mỗi mục */
+}
+
+.reviews_product {
+    border: 1px solid #ccc; /* Màu và độ rộng của viền */
+    padding: 10px; /* Khoảng cách bên trong của đánh giá */
+    margin-bottom: 10px; /* Khoảng cách dưới cùng */
+}
+
+.reviews_product i.fa-star {
+    color: #ffd700; /* Màu vàng cho các icon sao */
+}
+
 
 
 
