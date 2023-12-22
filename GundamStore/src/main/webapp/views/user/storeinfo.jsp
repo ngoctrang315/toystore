@@ -126,7 +126,7 @@
 							<form action="managergunpla">
 								<button class="btn btn-success fa fa-inbox btn-lg"
 									formaction="<c:url value="managergunpla"/>">
-									My Gunpla <span class="sr-only">(current)</span>
+									My Toy <span class="sr-only">(current)</span>
 								</button>
 								<button class="btn btn-success fa fa-inbox btn-lg"
 									formaction="<c:url value="/store-orders"/>">

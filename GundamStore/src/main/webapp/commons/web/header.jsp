@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <nav class="navbar navbar-expand-sm" style="background-color: #000080;">
 	<a class="navbar-brand text-white" href="#">TOY SHOP</a>
 
@@ -19,17 +20,17 @@
 					<c:choose>
 						<c:when test="${sessionScope.checkuser == null}">
 							<li class="nav-item  "><a class="nav-link "
-								href="${pageContext.request.contextPath}/home">Trang chủ <span
+								href="${pageContext.request.contextPath}/home">Home <span
 									class="sr-only">(current)</span>
 							</a></li>
 							<li class="nav-item  "><a class="nav-link "
-								href="${pageContext.request.contextPath}/gunpla">Sản Phẩm <span
+								href="${pageContext.request.contextPath}/gunpla">Toy<span
 									class="sr-only">(current)</span>
 							</a></li>
 							<li class="nav-item"><a class="nav-link"
-								href="${pageContext.request.contextPath}/login">Đăng nhập </a></li>
+								href="${pageContext.request.contextPath}/login">Login</a></li>
 							<li class="nav-item"><a class="nav-link"
-								href="${pageContext.request.contextPath}/register">Đăng ký</a></li>
+								href="${pageContext.request.contextPath}/register">Register</a></li>
 						</c:when>
 						<c:otherwise>
 							<c:if test="${sessionScope.checkuser == 1}">
@@ -44,7 +45,7 @@
 									href="${pageContext.request.contextPath}/admin-grade-management">Grade</a></li>
 							</c:if>
 							<c:if test="${sessionScope.checkuser == 2}">
-								<li class="nav-item  "><a class="nav-link " href="home">Trang Chủ
+								<li class="nav-item  "><a class="nav-link " href="home">Home
 										<span class="sr-only">(current)</span>
 								</a></li>
 
@@ -54,14 +55,14 @@
 								</a></li> --%>
 
 								<li class="nav-item  "><a class="nav-link "
-									href="<c:url value='storeinfo'/>">My Store <span
+									href="<c:url value='storeinfo'/>">My Store<span
 										class="sr-only">(current)</span>
 									</a>
 								</li>
 
 
 
-								<li class="nav-item  "><a class="nav-link " href="gunpla">Sản Phẩm
+								<li class="nav-item  "><a class="nav-link " href="gunpla">Toy
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<!-- 								<div class="colum my-2 my-sm-0" style="width: 3%"> -->
@@ -74,7 +75,7 @@
 								<!-- 								</div> -->
 							</c:if>
 							<li class="nav-item"><a class="nav-link"
-								href="${pageContext.request.contextPath}/logout">Đăng Xuất </a></li>
+								href="${pageContext.request.contextPath}/logout">Logout </a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -99,6 +100,7 @@
 						<i class="fa fa-shopping-cart"></i>
 						Cart
 						<span class="badge badge-light">0</span>
+						
 					</button>
 				</form>
 			</div>
@@ -119,7 +121,8 @@
 						formaction="<c:url value="/cart"/>">
 						<i class="fa fa-shopping-cart"></i>
 						Cart
-						<span class="badge badge-light">0</span>				
+						<span class="badge badge-light"></span>
+						<!-- (<span id="cartItemCount">0</span>)	 -->			
 						${sessionScope.detaillist.size()}
 					</button>
 

@@ -78,7 +78,7 @@
 						       <!-- Trong trang giỏ hàng -->
 							<form method="post" action="<c:url value='/views/user/checkout.jsp'/>" id="checkoutForm">
 							   <button class="btn btn-success" type="button" onclick="clearCart(); checkout();">
-								    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Purcher (<span id="cartItemCount">0</span>)
+								    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Purchase (<span id="cartItemCount">0</span>)
 								</button>
 
 

@@ -34,7 +34,7 @@
 	        	Contact
 	        	<br>
 	        	<hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-	        	<li><i class="fa fa-home mr-2"></i>HCMUTE</li>
+	        	<li><i class="fa fa-home mr-2"></i>Việt Nam</li>
 	        	<li><i class="fa fa-envelope mr-2"></i><a href="mailto:tranngoctrang315@gmail.com">tranngoctrang315@gmail.com</a></li>
 	        	<li><i class="fa fa-phone mr-2"></i> 0912 234 211</li>
 	        	<li><i class="fa fa-print mr-2"></i> 0912 234 211</li>

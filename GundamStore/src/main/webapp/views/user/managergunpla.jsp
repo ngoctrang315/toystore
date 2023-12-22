@@ -42,7 +42,7 @@
 
 							<div class="form-group">
 
-								<label for="">Gunpla Name:</label> <input type="text"
+								<label for="">Name:</label> <input type="text"
 									class="form-control" name="gunplaName"
 									value="${gunpla.gunplaName }" required
 									data-validation-required-message="Please enter gunpla name." />

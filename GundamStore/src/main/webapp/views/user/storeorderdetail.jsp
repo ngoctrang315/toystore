@@ -24,7 +24,7 @@
 		<table class="table" id="table">
 			<thead>
 				<tr>
-					<th scope="col">Gunpla</th>
+					<th scope="col">Product</th>
 					<th scope="col">Price</th>
 				</tr>
 			</thead>
@@ -40,8 +40,8 @@
 		</table>
 	</div>
 	
-	<form action="" method="post">
+<!-- 	<form action="" method="post">
 		<input type="submit" class="btn btn-primary m-2" name="confirm-dispatched"
 					style="width: 150px" value="Dispatched"> 
-	</form>
+	</form> -->
 </div>
